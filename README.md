@@ -1,9 +1,7 @@
 <h1 align="center">M3DLayout: A Multi-Source Dataset of 3D Indoor Layouts and Structured Descriptions for 3D Generation</h1>
 
 
-<h4 align="center">
 
-<h1 align="center">M3DLayout: A Multi-Source Dataset of 3D Indoor Layouts and Structured Descriptions for 3D Generation</h1>
 
 <h4 align="center" style="line-height:1.4; margin-top:0.6rem">
   <a href="https://github.com/Graphic-Kiliani">Yiheng Zhang</a><sup>1*</sup>,
