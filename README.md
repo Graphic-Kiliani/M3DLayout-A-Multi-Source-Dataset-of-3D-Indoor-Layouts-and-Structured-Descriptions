@@ -3,11 +3,34 @@
 
 <h4 align="center">
 
-[Yiheng Zhang](https://github.com/Graphic-Kiliani), [Zhuojiang Cai](https://www.caizhuojiang.com/), [Mingdao Wang](https://openreview.net/profile?id=~Mingdao_Wang1), [Meitong Guo](https://openreview.net/profile?id=~Meitong_Guo1), [Tianxiao Li](https://github.com/tingyunaiai9), [Li Lin](https://xplorestaging.ieee.org/author/37088600614), [Yuwang Wang](https://scholar.google.com/citations?user=KhFGpFIAAAAJ&hl=en)
+<h1 align="center">M3DLayout: A Multi-Source Dataset of 3D Indoor Layouts and Structured Descriptions for 3D Generation</h1>
 
-Tsinghua University, Beihang University, Migu Beijing Research Institute 
+<h4 align="center" style="line-height:1.4; margin-top:0.6rem">
+  <a href="https://github.com/Graphic-Kiliani">Yiheng Zhang</a><sup>1*</sup>,
+  <a href="https://www.caizhuojiang.com/">Zhuojiang Cai</a><sup>2*</sup>,
+  <a href="https://openreview.net/profile?id=~Mingdao_Wang1">Mingdao Wang</a><sup>1*</sup>,
+  <a href="https://openreview.net/profile?id=~Meitong_Guo1">Meitong Guo</a><sup>1</sup>,
+  <a href="https://github.com/tingyunaiai9">Tianxiao Li</a><sup>1</sup>,
+  <a href="https://xplorestaging.ieee.org/author/37088600614">Li Lin</a><sup>3</sup>,
+  <a href="https://scholar.google.com/citations?user=KhFGpFIAAAAJ&hl=en">Yuwang Wang</a><sup>1†</sup>
+</h4>
 
-[![Project Page](https://img.shields.io/badge/🏠-Project%20Page-blue.svg)](https://graphic-kiliani.github.io/M3DLayout/)
+<p align="center" style="margin:0.2rem 0 0.6rem 0;">
+  <sup>1</sup> Tsinghua University &nbsp;&nbsp;|&nbsp;&nbsp;
+  <sup>2</sup> Beihang University &nbsp;&nbsp;|&nbsp;&nbsp;
+  <sup>3</sup> Migu Beijing Research Institute
+</p>
+
+<p align="center" style="font-size:0.95em; color:#666; margin-top:0;">
+  * Equal contribution &nbsp;&nbsp;|&nbsp;&nbsp; † Corresponding author
+</p>
+
+<p align="center">
+  <a href="https://graphic-kiliani.github.io/M3DLayout/">
+    <img src="https://img.shields.io/badge/Project%20Page-blue.svg" alt="Project Page" height="22">
+  </a>
+</p>
+
 
 
 <p align="center">
