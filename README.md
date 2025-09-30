@@ -27,6 +27,9 @@
   <a href="https://graphic-kiliani.github.io/M3DLayout/">
     <img src="https://img.shields.io/badge/Project%20Page-blue.svg" alt="Project Page" height="22">
   </a>
+  <a href="https://arxiv.org/abs/2509.23728">
+      <img src="https://img.shields.io/badge/arXiv-b31b1b.svg?logo=arXiv&logoColor=white" alt="arXiv height="22">
+  </a>
 </p>
 
 
@@ -46,7 +49,9 @@ To assess the potential of M3DLayout, we establish a benchmark using a text-cond
 
 
 ## TODO
-- [ ] Provide inference code of M3DLayout
+- [ ] Release inference code of M3DLayout
+- [ ] Release Object Retrieval code of M3DLayout
+- [ ] Release rendering code of layouts and scenes
 - [ ] Provide training instruction for M3DLayout
 - [ ] Release M3DLayout dataset
 
@@ -54,9 +59,14 @@ To assess the potential of M3DLayout, we establish a benchmark using a text-cond
 ## Citation
 If you find our work helpful, please consider citing:
 ```bibtex
-@article{zhang2025m3dlayout,
-  author    = {Zhang, Yiheng and Cai, Zhuojiang, and Wang, Mingdao, and Guo, Meitong, and Li, Tianxiao, and Lin, Li, and  Wang, Yuwang},
-  journal   = {arXiv preprint arXiv:},
-  year      = {2025},
+@misc{zhang2025m3dlayoutmultisourcedataset3d,
+      title={M3DLayout: A Multi-Source Dataset of 3D Indoor Layouts and Structured Descriptions for 3D Generation}, 
+      author={Yiheng Zhang and Zhuojiang Cai and Mingdao Wang and Meitong Guo and Tianxiao Li and Li Lin and Yuwang Wang},
+      year={2025},
+      eprint={2509.23728},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2509.23728}, 
+}
 }
 ```
