@@ -39,6 +39,9 @@
 </p>
 </h4>
 
+
+We have released our **Object Retrieval** code, come and try it!!!
+Other codes and datset will be released as soon as possible.
 ## Abstract
 
 In text-driven 3D scene generation, object layout serves as a crucial intermediate representation that bridges high-level language instructions with detailed geometric output. It not only provides a structural blueprint for ensuring physical plausibility but also supports semantic controllability and interactive editing. 
