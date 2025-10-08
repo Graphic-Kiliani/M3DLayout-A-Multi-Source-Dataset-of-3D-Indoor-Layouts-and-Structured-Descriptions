@@ -49,8 +49,8 @@ To assess the potential of M3DLayout, we establish a benchmark using a text-cond
 
 
 ## TODO
+- [x] Release Object Retrieval code of M3DLayout
 - [ ] Release inference code of M3DLayout
-- [ ] Release Object Retrieval code of M3DLayout
 - [ ] Release rendering code of layouts and scenes
 - [ ] Provide training instruction for M3DLayout
 - [ ] Release M3DLayout dataset
