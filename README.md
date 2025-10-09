@@ -40,7 +40,7 @@
 </h4>
 
 
-We have released our **Object Retrieval** code, come and try it!!!
+We have released our **Object Retrieval** and **Rendering** code, come and try it!!!
 Other codes and datset will be released as soon as possible.
 ## Abstract
 
@@ -53,8 +53,8 @@ To assess the potential of M3DLayout, we establish a benchmark using a text-cond
 
 ## TODO
 - [x] Release Object Retrieval code of M3DLayout
+- [x] Release rendering code of layouts and scenes
 - [ ] Release inference code of M3DLayout
-- [ ] Release rendering code of layouts and scenes
 - [ ] Provide training instruction for M3DLayout
 - [ ] Release M3DLayout dataset
 
@@ -62,14 +62,11 @@ To assess the potential of M3DLayout, we establish a benchmark using a text-cond
 ## Citation
 If you find our work helpful, please consider citing:
 ```bibtex
-@misc{zhang2025m3dlayoutmultisourcedataset3d,
+@article{zhang2025m3dlayout,
       title={M3DLayout: A Multi-Source Dataset of 3D Indoor Layouts and Structured Descriptions for 3D Generation}, 
-      author={Yiheng Zhang and Zhuojiang Cai and Mingdao Wang and Meitong Guo and Tianxiao Li and Li Lin and Yuwang Wang},
+      author={Yiheng, Zhang and Zhuojiang, Cai and Mingdao, Wang and Meitong, Guo and Tianxiao, Li and Li, Lin and Yuwang, Wang},
+      journal={arXiv preprint arXiv:2509.23728},
       year={2025},
-      eprint={2509.23728},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
       url={https://arxiv.org/abs/2509.23728}, 
-}
 }
 ```
