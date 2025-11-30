@@ -1,0 +1,82 @@
+dataset:
+  encoding_type: "autoregressive"
+  sample_num_points: 121 # max_length
+  large_object_categories: ["appliances", "armchair", "bathtub", "bed", "beverage_fridge", "bookshelf",
+                            "cabinet", "ceiling_lamp", "cell_shelf", "chair", "chaise_longue_sofa", "chest_of_drawers",
+                            "children_cabinet", "chinese_chair", "coffee_table", "console_table",
+                            "corner_side_table", "counter", "curtain", "desk", "dining_chair", "dining_table",
+                            "dishwasher", "dressing_chair", "dressing_table", "floor_lamp",
+                            "glass_panel_door", "kids_bed", "kitchen_cabinet", "kitchen_space",
+                            "l_shaped_sofa", "large_plant_container", "large_shelf", "lazy_sofa",
+                            "lighting", "lite_door", "lounge_chair", "louver_door", "loveseat_sofa",
+                            "microwave", "mirror", "multi_seat_sofa", "nightstand", "oven", "panel_door",
+                            "pendant_lamp", "picture", "rug", "seating", "shelf", "shelving", "shower", "side_table",
+                            "sink", "sofa", "standing_sink", "stool", "table", "toilet", "trashcan", "tv_stand", "wardrobe", "window", "wine_cabinet"]
+  
+  # Data augmentation settings
+  enable_description_augmentation: true    # Enable automatic description augmentation
+  augmentation_probability: 0.8           # Probability of applying augmentation (0.0-1.0)
+  
+  # Small object filtering for Infinigen data
+  enable_small_object_filtering: true     # Enable small object filtering for Infinigen scenes
+  small_object_filtering_probability: 0.5 # Probability of filtering small objects (50%)
+  
+  # Sentence rewriting settings for style normalization
+  enable_sentence_rewriting: true         # Enable sentence rewriting to normalize style differences
+  sentence_rewriting_probability: 0.6     # Probability of applying sentence rewriting (0.0-1.0)
+  preserve_spatial_info: true             # Preserve spatial relationship information when rewriting
+
+train_data:
+  train_stats_file: "../mlayout/ar_stats_train.json"
+  json_files:
+    - "../mlayout/3dfront_train.json"
+    - "../mlayout/mp3d_train.json"
+    - "../mlayout/infinigen_train.json"
+
+val_data:
+  train_stats_file: "../mlayout/ar_stats_val.json"
+  json_files:
+    - "../mlayout/3dfront_val.json"
+    - "../mlayout/mp3d_val.json"
+    - "../mlayout/infinigen_val.json"
+
+network:
+  type: "autoregressive_transformer"
+  n_layers: 4
+  n_heads: 8
+  query_dimensions: 64
+  value_dimensions: 64
+  feed_forward_dimensions: 1024
+  hidden2output_layer: "autoregressive_mlc"
+  hidden_dims: 512
+  with_extra_fc: false
+  bbox_output: "autoregressive_mlc"
+  n_mixtures: 10
+  use_room_mask_as_features: true
+  text_condition: true
+  text_embed_dim: 512
+  # text_bge_m3_embedding: True  # Enable BGE-M3 text embedding
+
+feature_extractor:
+  name: "resnet18"
+  feature_size: 64
+  freeze_bn: true
+  input_channels: 1
+
+training:
+    splits: ["train", "val"]
+    epochs: 60000
+    batch_size: 256
+    save_frequency: 1000
+    optimizer: Adam
+    lr: 0.0001
+    weight_decay: 0.0
+
+validation:
+    splits: ["test"]
+    frequency: 1000000
+    batch_size: 128
+
+logger:
+  type: "wandb"
+  project: "mlayout_autoregressive_transformer"

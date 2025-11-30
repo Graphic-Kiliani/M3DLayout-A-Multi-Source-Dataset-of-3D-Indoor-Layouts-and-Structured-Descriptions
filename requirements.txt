@@ -1,0 +1,15 @@
+transformers>=4.28.0
+clip>=0.2.0
+pytorch-fast-transformers>=0.4.0
+numpy<2.0
+gradio>=3.36.1
+matplotlib>=3.10.7
+seaborn>=0.11.2
+wandb>=0.19.11
+git+https://github.com/caizhuojiang/viz3dl.git
+trimesh>=4.8.3
+shapely>=2.1.2
+scikit-image>=0.25.2
+opencv-python>=4.11.0.86
+tqdm>=4.67.1
+PyYAML>=6.0.3

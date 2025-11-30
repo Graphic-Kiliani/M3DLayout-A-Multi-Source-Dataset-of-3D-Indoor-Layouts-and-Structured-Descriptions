@@ -40,21 +40,35 @@
 </h4>
 
 
-We have released our **Object Retrieval** and **Rendering** code, come and try it!!!
+We have released our **Inference**, **Object Retrieval** and **Rendering** code, come and try it!!!
 Other codes and datset will be released as soon as possible.
-## Abstract
 
-In text-driven 3D scene generation, object layout serves as a crucial intermediate representation that bridges high-level language instructions with detailed geometric output. It not only provides a structural blueprint for ensuring physical plausibility but also supports semantic controllability and interactive editing. 
+<p align="center">
+    <img width="100%" alt="demo", src="./assets/demo.gif">
+</p>
 
-However, the learning capabilities of current 3D indoor layout generation models are constrained by the limited scale, diversity, and annotation quality of existing datasets. To address this, we introduce **M3DLayout, a large-scale, multi-source dataset for 3D indoor layout generation**. M3DLayout comprises **21,367 layouts** and over **433k object instances**, integrating three distinct sources: real-world scans, professional CAD designs, and procedurally generated scenes. Each layout is paired with detailed structured text describing global scene summaries, relational placements of large furniture, and fine-grained arrangements of smaller items. This diverse and richly annotated resource enables models to learn complex spatial and semantic patterns across a wide variety of indoor environments. 
+## Installation
+```bash
+conda create -n m3dlayout python=3.10 -y
+conda activate m3dlayout
+conda install cuda -c nvidia/label/cuda-12.1.0 -y
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+pip install -r requirements.txt --use-pep517 --no-build-isolation
+```
 
-To assess the potential of M3DLayout, we establish a benchmark using a text-conditioned diffusion model. Experimental results demonstrate that our dataset provides a solid foundation for training layout generation models. Its multi-source composition enhances diversity, notably through the Inf3DLayout subset which provides rich small-object information, enabling the generation of more complex and detailed scenes. We hope that M3DLayout can serve as a valuable resource for advancing research in text-driven 3D scene synthesis.
+## Download Weights
+Please download the model weights from [Google Drive](https://drive.google.com/drive/folders/19GMTUk92fC6FB_dHu0aUw5Whc4j2KEWS?usp=drive_link) or [Baidu Netdisk](https://pan.baidu.com/s/1F4JtU0yxA6Zi7tYb5dcK5g?pwd=63w9), and place them in the `./weights` directory.
 
+## Inference
+To run the Gradio demo for 3d layout generation from arbitrary text:
+```bash
+python gradio_demo.py
+```
 
 ## TODO
 - [x] Release Object Retrieval code of M3DLayout
 - [x] Release rendering code of layouts and scenes
-- [ ] Release inference code of M3DLayout
+- [x] Release inference code of M3DLayout
 - [ ] Provide training instruction for M3DLayout
 - [ ] Release M3DLayout dataset
 
@@ -70,3 +84,6 @@ If you find our work helpful, please consider citing:
       url={https://arxiv.org/abs/2509.23728}, 
 }
 ```
+
+## Acknowledgements
+Our code borrows from [ATISS](https://github.com/nv-tlabs/ATISS) and [DiffuScene](https://github.com/tangjiapeng/DiffuScene). We thank them for their excellent work. Please follow their licenses when using this part of the code.
