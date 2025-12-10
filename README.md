@@ -40,8 +40,7 @@
 </h4>
 
 
-We have released our **Inference**, **Object Retrieval** and **Rendering** code, come and try it!!!
-Other codes and datset will be released as soon as possible.
+We have released our **Dataset**, **Inference**, **Object Retrieval** and **Rendering** code, come and try it!!!
 
 <p align="center">
     <img width="100%" alt="demo", src="./assets/demo.gif">
@@ -84,8 +83,8 @@ python gradio_demo.py
 - [x] Release Object Retrieval code of M3DLayout
 - [x] Release rendering code of layouts and scenes
 - [x] Release inference code of M3DLayout
-- [x] Provide training instruction for M3DLayout
 - [x] Release M3DLayout dataset
+- [ ] Provide training instruction for M3DLayout
 
 
 ## Citation
