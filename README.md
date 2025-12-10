@@ -56,6 +56,21 @@ pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 pip install -r requirements.txt --use-pep517 --no-build-isolation
 ```
 
+## Download Dataset
+Please download our processed dataset from [Baidu Netdisk](https://pan.baidu.com/s/1MORQDB4LOROMiKx4FK1uog?pwd=77xy) (Google Drive edition will soon be released). Please reserve at least 230 GB of storage space to download these datasets. The following items are included: 
+
+| Dataset        | Rendering Images                                                                 | Additional Data                              |
+|----------------|-----------------------------------------------------------------------------------|-----------------------------------------------|
+| **Infinigen**  | • Floor masks<br>• Oblique-view scene renderings<br>• Top-down scene renderings<br>• Multi-view renderings of main objects | • Text descriptions<br>• Detailed per-scene JSON |
+| **3D-FRONT**   | • Floor masks<br>• Top-down scene renderings                                      | —                                             |
+| **Matterport3D** | • Floor masks for each region<br>• Top-down layout renderings for each region                   | • Detailed per-scene JSON                     |
+
+Each dataset additionally provides three JSON files with organized and detailed scene info and text descriptions for model training or layout visualization:  
+**`<data_source>_train.json`**, **`<data_source>_test.json`**, and **`<data_source>_val.json`**.
+
+You can use `visualization_mlayout.py` in [Object-Retrieval-Layout2Scene](https://github.com/Graphic-Kiliani/Object-Retrieval-Layout2Scene/tree/432d4c22dbd2d16e09d6c81629f124e523f0dc6a) to visualize above json files to see the layout.
+
+
 ## Download Weights
 Please download the model weights from [Google Drive](https://drive.google.com/drive/folders/19GMTUk92fC6FB_dHu0aUw5Whc4j2KEWS?usp=drive_link) or [Baidu Netdisk](https://pan.baidu.com/s/1F4JtU0yxA6Zi7tYb5dcK5g?pwd=63w9), and place them in the `./weights` directory.
 
@@ -69,8 +84,8 @@ python gradio_demo.py
 - [x] Release Object Retrieval code of M3DLayout
 - [x] Release rendering code of layouts and scenes
 - [x] Release inference code of M3DLayout
-- [ ] Provide training instruction for M3DLayout
-- [ ] Release M3DLayout dataset
+- [x] Provide training instruction for M3DLayout
+- [x] Release M3DLayout dataset
 
 
 ## Citation
